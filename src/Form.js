@@ -1,6 +1,6 @@
 
 import React from 'react'
-
+import Order from './Order'
 export default function PizzaOrder(props){
 
     const {
@@ -10,6 +10,7 @@ export default function PizzaOrder(props){
         checkboxChange,
         disabled,
         errors,
+        orders
     } = props
 
 
@@ -109,6 +110,11 @@ export default function PizzaOrder(props){
                     onChange={onCheckboxChange}
                 />
                 </label>
+                <div className="Order-Container">
+                {
+                  <Order info={orders} />
+                }
+              </div>
             </div>
         </form>
     )
